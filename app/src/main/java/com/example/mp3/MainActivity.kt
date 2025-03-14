@@ -41,23 +41,6 @@ class MainActivity : AppCompatActivity(), MP3ListAdapter.OnItemClickListener {
     }
 
     private fun loadMP3Files() {
-       /* val contentResolver = contentResolver
-        val uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
-        val cursor = contentResolver.query(uri, null, null, null, null)
-        if (cursor != null && cursor.moveToFirst()) {
-            do {
-                val title =
-                    cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))
-                val artist =
-                    cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST))
-                val filePath =
-                    cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA))
-                val mp3File = MP3File(title, artist, filePath)
-                mp3Files.add(mp3File)
-            } while (cursor.moveToNext())
-            cursor.close()
-            mp3Adapter.notifyDataSetChanged()
-        }*/
             val contentResolver = contentResolver
             val uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
             val projection = arrayOf(
@@ -84,57 +67,6 @@ class MainActivity : AppCompatActivity(), MP3ListAdapter.OnItemClickListener {
             }
 
     }
-
-   /* private fun loadMP3Files() {
-        val downloadsDirectory = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString())
-        val mp3Files = downloadsDirectory.listFiles { file ->
-            file.isFile && file.extension.equals("mp3", ignoreCase = true)
-        }
-        mp3Files?.forEach { mp3File ->
-            // Process each MP3 file
-            val title = mp3File.nameWithoutExtension
-            val artist = "Unknown" // You may extract artist information if available
-            val filePath = mp3File.absolutePath
-            val mp3FileObject = MP3File(title, artist, filePath)
-            // Add mp3FileObject to your list or adapter
-        }
-    }*/
-
-    /*private fun loadMP3Files() {
-        val downloadsDirectory = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString())
-        val mp3Files = downloadsDirectory.listFiles { file ->
-            file.isFile && file.extension.equals("mp3", ignoreCase = true)
-        }
-        val mp3FileList = ArrayList<MP3File>() // Define a list to store MP3File objects
-        mp3Files?.forEach { mp3File ->
-            // Process each MP3 file
-            val title = mp3File.nameWithoutExtension
-            val artist = "Unknown" // You may extract artist information if available
-            val filePath = mp3File.absolutePath
-            val mp3FileObject = MP3File(title, artist, filePath)
-            mp3FileList.add(mp3FileObject) // Add MP3File object to the list
-        }
-        // Assuming mp3Adapter is your RecyclerView adapter
-        mp3Adapter.submitList(mp3FileList) // Submit the list to the adapter
-    }*/
-
-/*    private fun loadMP3Files() {
-        val downloadsDirectory = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString())
-        val mp3Files = downloadsDirectory.listFiles { file ->
-            file.isFile && file.extension.equals("mp3", ignoreCase = true)
-        }
-        val mp3FileList = ArrayList<MP3File>()
-        mp3Files?.forEach { mp3File ->
-            // Process each MP3 file
-            val title = mp3File.nameWithoutExtension
-            val artist = "Unknown"
-            val filePath = mp3File.absolutePath
-            val mp3FileObject = MP3File(title, artist, filePath)
-            mp3FileList.add(mp3FileObject)
-        }
-        // Assuming mp3Adapter is your RecyclerView adapter
-        mp3Adapter.updateData(mp3FileList) // Update the adapter's data
-    }*/
 
 
 
