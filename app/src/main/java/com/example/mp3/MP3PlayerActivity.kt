@@ -26,7 +26,6 @@ class MP3PlayerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mp3_player)
 
-//        val mp3File = intent.getParcelableExtra("mp3File", MP3File::class.java)
         val mp3File = intent.getParcelableExtra<MP3File>("mp3File")
         var title: TextView = findViewById<TextView?>(R.id.titleTextView)
         title.text = mp3File?.title
