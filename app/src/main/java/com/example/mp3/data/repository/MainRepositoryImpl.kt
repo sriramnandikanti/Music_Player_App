@@ -1,9 +1,9 @@
 package com.example.mp3.data.repository
 
 import androidx.lifecycle.LiveData
-import com.music.player.EventDao
-import com.music.player.domain.repository.MainRepository
-import com.music.player.presentation.welcomePage.DataModel
+import com.example.mp3.EventDao
+import com.example.mp3.domain.repository.MainRepository
+
 
 /* Class For all logical operation please add all operation here*/
 class MainRepositoryImpl constructor(private var dao: EventDao
