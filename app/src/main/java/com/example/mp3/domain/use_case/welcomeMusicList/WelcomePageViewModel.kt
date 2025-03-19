@@ -3,8 +3,7 @@ package com.example.mp3.domain.use_case.welcomeMusicList
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.music.player.domain.repository.MainRepository
-import com.music.player.presentation.welcomePage.DataModel
+import com.example.mp3.domain.repository.MainRepository
 
 // ViewModel for getting Music List from mobile and  Connecting UseCase and Activity of Welcome Page
 
