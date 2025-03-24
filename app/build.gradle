@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.example.mp3'
-    compileSdk 34
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.mp3"
@@ -17,6 +17,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
 
     buildTypes {
@@ -31,6 +34,17 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    // required-for-robolectric (2)
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
     }
 }
 

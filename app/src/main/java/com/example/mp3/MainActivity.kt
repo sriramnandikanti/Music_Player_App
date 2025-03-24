@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity(), MP3ListAdapter.OnItemClickListener {
+/*class MainActivity : AppCompatActivity(), MP3ListAdapter.OnItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var mp3Adapter: MP3ListAdapter
     private var mp3Files: ArrayList<MP3File> = ArrayList()
@@ -92,4 +92,4 @@ class MainActivity : AppCompatActivity(), MP3ListAdapter.OnItemClickListener {
     companion object {
         private const val PERMISSION_REQUEST_CODE = 101
     }
-}
+}*/

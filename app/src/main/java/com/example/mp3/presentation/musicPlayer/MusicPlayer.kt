@@ -19,6 +19,8 @@ import com.example.mp3.SongsDataBase
 import com.example.mp3.data.repository.MainRepositoryImpl
 import com.example.mp3.domain.use_case.welcomeMusicList.MyViewModelFactory
 import com.example.mp3.domain.use_case.welcomeMusicList.WelcomePageViewModel
+import com.example.mp3.presentation.welcomePage.DataModel
+import com.example.mp3.presentation.welcomePage.getMusicFromDevice
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

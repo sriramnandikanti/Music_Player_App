@@ -7,7 +7,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.music.player.presentation.welcomePage.DataModel
+import com.example.mp3.presentation.welcomePage.DataModel
 
 @Dao
 interface EventDao {
