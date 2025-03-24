@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.musicPlayer.MusicPlayer">
+    <item
+        android:id="@+id/fav_icon"
+        android:title="favourite"
+
+        android:icon="@drawable/favorite"
+        android:contentDescription="favourite"
+        app:showAsAction="ifRoom"/>
+
+</menu>
